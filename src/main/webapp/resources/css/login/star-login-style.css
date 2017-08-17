@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color: #D7E1E8;
+	background: url(../../images/pattern.png);
+	font-size: 12px;
+	margin-right: 0px !important;
+}
+
+#fullpage {
+	width: 100%;
+	height: auto;
+}
+
+.header {
+	width: 100%;
+	height: auto;
+	background-color: #ddd;
+}
+
+a.logo {
+	color: #FFF;
+	text-decoration: none;
+	padding: 10px;
+}
+
+a.logo>b {
+	font-size: 30px;
+}
+
+.loginform {
+	height: auto;
+	position: fixed;
+	right: 350px;
+	z-index: 999;
+	padding: 40px;
+}
+
+.panel>.panel-heading>.panel-title {
+	padding: 10px;
+}
+
+.copyrights {
+	width: 100%;
+	height: auto;
+	background-color: #ccc;
+	padding: 10px;
+}
+
+.modal-header {
+	background-color: #0081c1;
+	color: #fff;
+}
+
+#star-wrapper {
+	margin-top: 100px;
+	margin-left: 300px;
+	font-size: 18px;
+}
+
+#star-body-form {
+	margin-top: 420px;
+}
+
+#star-userId {
+	font-size: 20px;
+	color: red;
+}
+
+#star-log-out {
+	margin-left: 1250px;
+	margin-top: 50px;
+	font-size: 15px;
+}

@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>Spring Security</title>
+</head>
+<body>
+	<!--  added for loading symbol display in screen  -->
+	<div id="page-cover" class="hidden"></div>
+
+	<div class="modal fade" id="pleaseWaitDialog" data-backdrop="static"
+		tabindex="-1" role="dialog" aria-labelledby="starModalLabel"
+		aria-hidden="true" data-keyboard="false">
+		<div class="modal-dialog modal-md">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="progress">
+						<div
+							class="progress-bar active progress-bar-striped progress-bar-default"
+							role="progressbar" aria-valuenow="80" aria-valuemin="0"
+							aria-valuemax="100" style="width: 100%; z-index: 1000010;">Processing..........</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--  added for loading symbol display in screen  -->
+	<div id="fullpage">
+		<div class="header">
+			<div th:substituteBy="login/login-header" th:remove="tag"></div>
+		</div>
+		<!--header-->
+		<div class="container">
+			<div class="col-md-4 col-sm-6 col-xs-9 loginform">
+				<div class="panel">
+					<div class="panel-heading">
+						<div class="panel-title">Sign In</div>
+					</div>
+
+					<div style="padding-top: 20px" class="panel-body">
+						<div th:if="${starMessage != null}" class="alert alert-danger">
+							<span th:text="${starMessage}"></span>
+						</div>
+						<form method="post"
+							th:action="${reqParamsStr} ? @{${'/' + T(com.star.sud.SectionKeys).LOG_IN + '?' + reqParamsStr}} : @{${'/' + T(com.star.sud.SectionKeys).LOG_IN}}"
+							class="form-horizontal">
+
+							<div style="margin-bottom: 25px" class="input-group">
+								<span class="input-group-addon"><i class="fa fa-user"></i></span>
+								<input type="text" class="form-control" id="j_username"
+									name="j_username" placeholder="User Name"></input>
+							</div>
+
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+								<input type="password" class="form-control" id="j_password"
+									name="j_password" placeholder="Password"></input>
+							</div>
+
+							<div style="margin-top: 20px" class="form-group">
+								<div class="col-sm-12 controls">
+									<button type="submit" class="btn btn-success star-link">Login</button>
+									<button type="reset" class="btn btn-danger">Reset</button>
+									<a class="pull-right"
+										th:href="@{${'/' + T(com.star.sud.SectionKeys).FORGOT_PASSWORD}}"
+										data-toggle="modal" data-target="#pleaseWaitDialog">Forgot
+										Password</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div id="dbCarousel" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<img th:src="@{/resources/images/blank.png}" width="95%" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="col-lg-12 col-sm-12 col-xs-12 copyrights">
+		<div th:substituteBy="login/login-footer" th:remove="tag"></div>
+	</div>
+
+</body>
+</html>
