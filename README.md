@@ -8,8 +8,8 @@ In this Application Spring security is included.
 * Java 8
 
 # Tool Used
-* `Eclipse` - Mars
-* `Server`  - Wildfly
+* `Eclipse` - Mars 2
+* `Server`  - Wildfly 10
 
 # Steps need to use to run this Application
 
