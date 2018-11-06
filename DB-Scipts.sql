@@ -15,3 +15,9 @@ create table STAR_SM_USER_ROLE
   role_name        VARCHAR2(100),
   role_description VARCHAR2(100)
 );
+
+-- Insert scripts for user table --
+insert into star_sm_user (STAR_ID, USER_NAME, USER_PASSWORD, IS_ENABLED, STATUS)
+values (1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1, 'ACTIVE');
+
+
