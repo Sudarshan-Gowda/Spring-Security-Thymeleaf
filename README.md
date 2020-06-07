@@ -26,3 +26,7 @@ In this Application Spring security is included.
 
 * `Step 6` - If Entered credential is wrong means, you will redirect to same login page with error message 
 
+
+<img src="https://github.com/Sudarshan-Gowda/Spring-Security-Thymeleaf/blob/master/docs/picture1.png"/>
+<img src="https://github.com/Sudarshan-Gowda/Spring-Security-Thymeleaf/blob/master/docs/picture2.png"/>
+<img src="https://github.com/Sudarshan-Gowda/Spring-Security-Thymeleaf/blob/master/docs/picture3.png"/>
